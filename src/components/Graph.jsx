@@ -30,7 +30,7 @@ datasets: [
  ]
 };
 const Graph = (props) => {
-    const api_data = props.data;
+    const api_data =props.data;
 
 return (
   <div id="pieChart">

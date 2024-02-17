@@ -9,20 +9,27 @@ function App() {
   // SEARCH COMPONENT STUFF
   // State to store the search query
   const[query, setQuery] = useState('CA-ON');
-
-  // Updates the search query with zone code based on selected zone
-  function submitSearch(e) {
-    e.preventDefault();
-    setQuery(e.target.value);
-  }
-
+  
   // DISPLAY DATA COMPONENT STUFF
   // Json data to be passed to display data component
   const [data, setData] = useState(null);
 
+    // Rerun api call when query updates
+    useEffect(() => {
+      fetchData(query);
+    }, [query]);
+
+  // Updates the search query with zone code based on selected zone
+  function submitSearch(e) {
+    e.preventDefault();
+    var zone = document.getElementById('select-province').value;
+    setQuery(zone);
+  }
+
+
   // Fetches power breakdown data from the electricity map API based on search zone code.
   function fetchData(query) {
-    fetch('https://api.electricitymap.org/v3/power-breakdown/latest?lat=48.8566&lon=2.3522')
+    fetch(`https://api.electricitymap.org/v3/power-breakdown/latest?zone=${query}`)
       .then((response) => response.json(), {
         mode: 'cors',
         header:{
@@ -34,14 +41,9 @@ function App() {
       });
   }
 
-  // Rerun api call when query updates
-  useEffect(() => {
-    fetchData();
-  }, [query]);
-
   return (
     <div className="App">
-      <Search/>
+      <Search submitSearch={submitSearch}/>
       <DisplayData 
       data = {data}/>
     </div>
