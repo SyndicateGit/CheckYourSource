@@ -8,11 +8,11 @@ import React, { useState, useEffect } from 'react';
 function App() {
   // SEARCH COMPONENT STUFF
   // State to store the search query
-  const[query, setQuery] = useState('CA-ON');
+  const[query, setQuery] = useState('CA-SK');
   
   // DISPLAY DATA COMPONENT STUFF
   // Json data to be passed to display data component
-  const [data, setData] = useState(null);
+  const [data, setData] = useState('');
 
     // Rerun api call when query updates
     useEffect(() => {

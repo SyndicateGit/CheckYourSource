@@ -30,7 +30,8 @@ datasets: [
  ]
 };
 const Graph = (props) => {
-    const api_data =props.data;
+    const api_data = props.data;
+    /* console.log(api_data.powerConsumptionBreakdown.coal); */
 
 return (
   <div id="pieChart">
