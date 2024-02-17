@@ -43,16 +43,28 @@ function App() {
       });
   }
 
-  return (
+  if(data.error){
+    return (
     <div className="App">
       <Introduction/>
       <Search submitSearch={submitSearch}/>
-      <div id="zone-country">{zones[data.zone].countryName}</div>
-      <div id="zone-name">{zones[data.zone].zoneName}</div>
-      <DisplayData 
-      data = {data}/>
-    </div>
-  );
+      
+    </div>);
+  }else{
+    console.log(data);
+    return (
+      <div className="App">
+        <Introduction/>
+        <Search submitSearch={submitSearch}/>
+        <div id="zone-country">{zones[data.zone].countryName}</div>
+        <div id="zone-name">{zones[data.zone].zoneName}</div>
+        <DisplayData 
+        data = {data}/>
+      </div>
+    );
+  }
+
+  
 }
 
 export default App;
