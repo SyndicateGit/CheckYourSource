@@ -14,7 +14,9 @@ datasets: [
   },
  ],
 };
-const Graph = () => {
+const Graph = (props) => {
+    const data = props.data;
+
 return (
   <div>
     <Pie data={data} />
