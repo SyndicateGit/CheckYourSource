@@ -1,10 +1,12 @@
 import '../styles/DisplayData.css';
 import Graph  from './Graph';
 
-const DisplayData = () => {
+const DisplayData = (props) => {
+  const data = props.data;
   return (
     <div>
-      <Graph></Graph>
+      <Graph
+      data={data}></Graph>
     </div>
   );
 };
