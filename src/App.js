@@ -17,9 +17,12 @@ function App() {
   // Json data to be passed to display data component
   const [data, setData] = useState(temp_data);
 
+  const[carbonIntensity, setCarbonIntensity] = useState(0);
+
     // Rerun api call when query updates
     useEffect(() => {
       fetchData(query);
+      fetchCarbonIntensity(query);
     }, [query]);
 
   // Updates the search query with zone code based on selected zone
@@ -44,6 +47,19 @@ function App() {
       });
   }
 
+  function fetchCarbonIntensity(query){
+    fetch(`https://api.electricitymap.org/v3/carbon-intensity/latest?zone=${query}`)
+      .then((response) => response.json(), {
+        mode: 'cors',
+        header:{
+          'auth-token': '6jTh4iOxCZaYk',
+        }
+      })
+      .then((data) => {
+        setCarbonIntensity(data.carbonIntensity);
+      });
+  }
+
   if(data.error){
     return (
     <div className="App">
@@ -52,7 +68,6 @@ function App() {
       <Error404/>
     </div>);
   }else{
-    console.log(data);
     return (
       <div className="App">
         <Introduction/>
@@ -60,7 +75,8 @@ function App() {
         <div id="zone-country">{zones[data.zone].countryName}</div>
         <div id="zone-name">{zones[data.zone].zoneName}</div>
         <DisplayData 
-        data = {data}/>
+        data = {data}
+        carbonIntensity={carbonIntensity}/>
       </div>
     );
   }
