@@ -72,8 +72,8 @@ function App() {
       <div className="App">
         <Introduction/>
         <Search submitSearch={submitSearch}/>
-        <div id="zone-country">{zones[data.zone].countryName}</div>
-        <div id="zone-name">{zones[data.zone].zoneName}</div>
+        <h2 id="zone-country">{zones[data.zone].countryName}</h2>
+        <h2 id="zone-name">{zones[data.zone].zoneName}</h2>
         <DisplayData 
         data = {data}
         carbonIntensity={carbonIntensity}/>

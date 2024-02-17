@@ -47,15 +47,25 @@ const Graph = (props) => {
     arr.push(api_data.powerConsumptionBreakdown.wind);
     arr.push(api_data.powerConsumptionBreakdown.unknown);
     
+    const total_consumption = api_data.powerConsumptionBreakdown.biomass + api_data.powerConsumptionBreakdown.coal + api_data.powerConsumptionBreakdown.gas + api_data.powerConsumptionBreakdown.geothermal + api_data.powerConsumptionBreakdown.hydro + api_data.powerConsumptionBreakdown.nuclear + api_data.powerConsumptionBreakdown.oil + api_data.powerConsumptionBreakdown.solar + api_data.powerConsumptionBreakdown.wind + api_data.powerConsumptionBreakdown.unknown;
+
     const NameValueDisplay = ({ arr, labels }) => {
+
         return (
-          <ul>
+          <table className="table">
+            <tr>
+              <th>Source</th>
+              <th>Amount</th>
+              <th>Percentage</th>
+            </tr>
             {arr.map((a, i) => (
-              <div key={i}>
-                {labels[i]} - {a}
-              </div>
+              <tr key={i} className="table-row">
+                <td>{labels[i]}</td>
+                <td>{a}</td>
+                <td>{(100*a/total_consumption).toFixed(2)}</td>
+              </tr>
             ))}
-          </ul>
+          </table>
         );
     };
 

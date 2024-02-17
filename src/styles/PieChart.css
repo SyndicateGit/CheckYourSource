@@ -3,8 +3,12 @@
     justify-content: center;
     align-content: center;
     width: 30%;
-    height: 30%;
+    height: 100%;
     margin: auto;
+}
+
+#pieChart ul {
+   color: white;
 }
 
 .values {
@@ -14,4 +18,16 @@
 
 .pieChart {
     color: white;
+}
+
+#total-consumption,
+#renewable-percentage,
+#carbon-intensity,
+.table {
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
+
 }
