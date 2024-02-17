@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import '../styles/DisplayData.css';
+import Graph  from './Graph';
 
 const DisplayData = () => {
   // Used to test display data component.
@@ -23,7 +24,7 @@ const DisplayData = () => {
 
   return (
     <div>
-      {/* Your JSX code here */}
+      <Graph></Graph>
     </div>
   );
 };
