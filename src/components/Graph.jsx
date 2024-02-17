@@ -1,14 +1,15 @@
 // ./components/PieChart.js
 import React from "react";
-import Chart from "chart.js/auto";
+import Chart, { Colors } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import "../styles/PieChart.css";
 
+Chart.defaults.color = 'black';
 
 const Graph = (props) => {
     const labels = ["biomass", "coal", "gas", "geothermal", "hydro", "nuclear", "oil", "solar", "wind", "unknown"];
     let arr = [];
-    const data = {
+    const chart1 = {
     labels: labels,
     datasets: [
     {
@@ -70,7 +71,7 @@ const Graph = (props) => {
 
     return (
     <div id="pieChart">
-        <Pie className="pie" data={data} />
+        <Pie data={chart1} className="pieChart" style={{color: "white"}}/>
         <div>
             <NameValueDisplay arr={arr} labels={labels} className="values"/>
         </div>

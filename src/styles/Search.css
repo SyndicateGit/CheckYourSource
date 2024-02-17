@@ -7,6 +7,10 @@
 h1{
     color: var(--Titles);
 }
+
+h2{
+
+}
 .search-box {
     display: flex;
     flex-direction: column;
@@ -42,7 +46,7 @@ h1{
 #zone-name {
  display: flex;
  justify-content: center;
- font-size: large;
+ font-size: 1.5rem;
  color:var(--Titles);
  background-color: #56776A;
 }
