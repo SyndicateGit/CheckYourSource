@@ -1,10 +1,13 @@
 import './styles/App.css';
 import DisplayData from './components/DisplayData';
+import Search from './components/Search';
 
 function App() {
+  
   return (
     <div className="App">
-      <DisplayData />
+      <Search/>
+      <DisplayData/>
     </div>
   );
 }
