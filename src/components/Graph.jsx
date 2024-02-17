@@ -22,9 +22,8 @@ datasets: [
   },
  ]
 };
-const Graph = () => {
-    /* const data = props.data;
-    console.log(data); */
+const Graph = (props) => {
+    const api_data =props.data;
 
 return (
   <div id="pieChart">
