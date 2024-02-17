@@ -5,8 +5,8 @@ const Search = (props) => {
     <div>
       {<div className="search-box">
         <h1> Explore Energy Usage by Location</h1>
-        <form action="" id='search-form'>
-          <select id="select-province" placeholder="Select a Province">
+        <form action="" id='search-form' onSubmit={props.submitSearch}>
+          <select name='zone' id="select-province" placeholder="Select a Province" form="search-form">
               <option value="">Select a Province...</option>
               <option value="AB">Alberta</option>
               <option value="BC">British Columbia</option>
@@ -22,7 +22,7 @@ const Search = (props) => {
               <option value="NU">Nunavut</option>
               <option value="YT">Yukon</option>
           </select>
-          <button onClick={props.submitSearch} id="search-button">Search</button>
+          <button id="search-button">Search</button>
         </form>
     </div>}
     </div>
