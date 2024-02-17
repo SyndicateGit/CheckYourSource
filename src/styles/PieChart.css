@@ -7,7 +7,20 @@
     margin: auto;
 }
 
+#pieChart ul {
+   color: white;
+}
+
 .values {
     display: inline-block;
     background-color: grey;
+}
+
+#total-consumption,
+#renewable-percentage,
+#carbon-intensity{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: white;
 }
