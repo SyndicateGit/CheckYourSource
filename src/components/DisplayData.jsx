@@ -7,6 +7,8 @@ const DisplayData = (props) => {
     <div>
       <Graph
       data={data}></Graph>
+      <div id='total-consumption'>Power Consumption Total: {props.data.powerConsumptionTotal}</div>
+      <div id='renewable-percentage'>Renewable Percentage: {props.data.renewablePercentage}%</div>
     </div>
   );
 };
