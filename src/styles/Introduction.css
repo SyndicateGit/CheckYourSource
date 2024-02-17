@@ -1,0 +1,12 @@
+.Intro {
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/tree-mountain.jpg');
+    background-size: cover; 
+    background-position: center; 
+    height: 50vh;
+    text-align: center;
+    justify-content: center;  
+    color:aquamarine;
+    text-shadow: 2px 2px 2px rgb(28, 197, 146);
+}
