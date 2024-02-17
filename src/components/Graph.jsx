@@ -4,7 +4,7 @@ import Chart, { Colors } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import "../styles/PieChart.css";
 
-Chart.defaults.color = 'black';
+Chart.defaults.color = '#fff';
 
 const Graph = (props) => {
     const labels = ["biomass", "coal", "gas", "geothermal", "hydro", "nuclear", "oil", "solar", "wind", "unknown"];
@@ -71,7 +71,7 @@ const Graph = (props) => {
 
     return (
     <div id="pieChart">
-        <Pie data={chart1} className="pieChart" style={{color: "white"}}/>
+        <Pie data={chart1} className="pieChart" />
         <div>
             <NameValueDisplay arr={arr} labels={labels} className="values"/>
         </div>
