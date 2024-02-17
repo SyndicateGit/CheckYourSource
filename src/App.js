@@ -4,6 +4,7 @@ import Search from './components/Search';
 import temp_data from './temp_data.json';
 import React, { useState, useEffect } from 'react';
 import Introduction from './components/Introduction';
+import Error404 from './components/Error404';
 
 import zones from './zones.json';
 
@@ -48,7 +49,7 @@ function App() {
     <div className="App">
       <Introduction/>
       <Search submitSearch={submitSearch}/>
-      
+      <Error404/>
     </div>);
   }else{
     console.log(data);
