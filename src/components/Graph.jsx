@@ -6,26 +6,27 @@ import "../styles/PieChart.css";
 
 
 const Graph = (props) => {
-    const labels = ["coal", "wind", "gas", "hydro", "solar", "nuclear"];
+    const labels = ["biomass", "coal", "gas", "geothermal", "hydro", "nuclear", "oil", "solar", "wind", "unknown"];
     let arr = [];
     const data = {
     labels: labels,
     datasets: [
     {
         label: "energy percentage",
-        backgroundColor: ["#007D9C",
-        "#244D70",
-        "#D123B3",
-        "#F7E018",
-        "#fff21",
-        "#FE452A"],
+        backgroundColor: [
+            '#e1dc66',
+            '#ea3db3',
+            '#62035c',
+            '#f5950e',
+            '#63f46a',
+            '#41aebc',
+            '#cb2c14',
+            '#97f4d6',
+            '#9155ca',
+            '#443e97'
+        ],
         borderColor: [
-            "rgba(255,99,132,1)",
-            "rgba(54, 162, 235, 1)",
-            "rgba(255, 206, 86, 1)",
-            "rgba(75, 192, 192, 1)",
-            "rgba(153, 102, 255, 1)",
-            "rgba(255, 159, 64, 1)",
+            '#fff'
         ],
         data: arr,
         borderWidth: 1,
@@ -34,12 +35,35 @@ const Graph = (props) => {
     };
 
     const api_data = props.data;
+    arr.push(api_data.powerConsumptionBreakdown.biomass);
     arr.push(api_data.powerConsumptionBreakdown.coal);
-    console.log(api_data);
+    arr.push(api_data.powerConsumptionBreakdown.gas);
+    arr.push(api_data.powerConsumptionBreakdown.geothermal);
+    arr.push(api_data.powerConsumptionBreakdown.hydro);
+    arr.push(api_data.powerConsumptionBreakdown.nuclear);
+    arr.push(api_data.powerConsumptionBreakdown.oil);
+    arr.push(api_data.powerConsumptionBreakdown.solar);
+    arr.push(api_data.powerConsumptionBreakdown.wind);
+    arr.push(api_data.powerConsumptionBreakdown.unknown);
+    
+    const NameValueDisplay = ({ arr, labels }) => {
+        return (
+          <ul>
+            {arr.map((a, i) => (
+              <div key={i}>
+                {labels[i]} - {a}
+              </div>
+            ))}
+          </ul>
+        );
+    };
 
     return (
     <div id="pieChart">
         <Pie data={data} />
+        <div>
+            <NameValueDisplay arr={arr} labels={labels} className="values"/>
+        </div>
     </div>
     );
 };
