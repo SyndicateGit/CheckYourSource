@@ -12,7 +12,7 @@ const Graph = (props) => {
     labels: labels,
     datasets: [
     {
-        label: "energy percentage",
+        label: "energy consumption MW",
         backgroundColor: [
             '#e1dc66',
             '#ea3db3',
@@ -70,7 +70,7 @@ const Graph = (props) => {
 
     return (
     <div id="pieChart">
-        <Pie data={data} />
+        <Pie className="pie" data={data} />
         <div>
             <NameValueDisplay arr={arr} labels={labels} className="values"/>
         </div>
