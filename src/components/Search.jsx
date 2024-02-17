@@ -8,19 +8,19 @@ const Search = (props) => {
         <form action="" id='search-form' onSubmit={props.submitSearch}>
           <select name='zone' id="select-province" placeholder="Select a Province" form="search-form">
               <option value="">Select a Province...</option>
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-              <option value="MB">Manitoba</option>
-              <option value="NB">New Brunswick</option>
-              <option value="NL">Newfoundland and Labrador</option>
-              <option value="NS">Nova Scotia</option>
-              <option value="ON">Ontario</option>
-              <option value="PE">Prince Edward Island</option>
-              <option value="QC">Quebec</option>
-              <option value="SK">Saskatchewan</option>
-              <option value="NT">Northwest Territories</option>
-              <option value="NU">Nunavut</option>
-              <option value="YT">Yukon</option>
+              <option value="CA-AB">Alberta</option>
+              <option value="CA-BC">British Columbia</option>
+              <option value="CA-MB">Manitoba</option>
+              <option value="CA-NB">New Brunswick</option>
+              <option value="CA-NL">Newfoundland and Labrador</option>
+              <option value="CA-NS">Nova Scotia</option>
+              <option value="CA-ON">Ontario</option>
+              <option value="CA-PE">Prince Edward Island</option>
+              <option value="CA-QC">Quebec</option>
+              <option value="CA-SK">Saskatchewan</option>
+              <option value="CA-NT">Northwest Territories</option>
+              <option value="CA-NU">Nunavut</option>
+              <option value="CA-YT">Yukon</option>
           </select>
           <button id="search-button">Search</button>
         </form>
