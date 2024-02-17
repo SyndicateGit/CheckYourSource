@@ -3,8 +3,9 @@ import DisplayData from './components/DisplayData';
 import Search from './components/Search';
 import temp_data from './temp_data.json';
 import React, { useState, useEffect } from 'react';
-import Introduction from './components/Introduction';
 import Error404 from './components/Error404';
+
+import './styles/Introduction.css';
 
 import zones from './zones.json';
 
@@ -63,15 +64,25 @@ function App() {
   if(data.error){
     return (
     <div className="App">
-      <Introduction/>
+          <div class = "Intro">
+      <h1>Where Does your Energy Come From?</h1>
       <Search submitSearch={submitSearch}/>
+      <p>In a world where we consume a lot of energy it is important to know where it comes from </p>
+      <p>Find out where your energy comes from below! </p>
+    </div>
       <Error404/>
     </div>);
   }else{
     return (
       <div className="App">
-        <Introduction/>
-        <Search submitSearch={submitSearch}/>
+            <div class = "Intro">
+      <h1>Where Does your Energy Come From?</h1>
+      <Search submitSearch={submitSearch}/>
+      <p>In a world where we consume a lot of energy it is important to know where it comes from </p>
+      <p>Find out where your energy comes from below! </p>
+
+    </div>
+        
         <h2 id="zone-country">{zones[data.zone].countryName}</h2>
         <h2 id="zone-name">{zones[data.zone].zoneName}</h2>
         <DisplayData 
