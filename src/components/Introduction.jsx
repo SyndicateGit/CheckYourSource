@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styles/Introduction.css';
 
 const Introduction = () => {
   return (
-    <div>
-      <h1>Welcome to the Introduction component!</h1>
-      <p>This is where you can introduce your application or provide some information.</p>
+    <div class = "Intro">
+      <h1>Where Does your Energy Come From?</h1>
+      <p>In a world where we consume a lot of energy </p>
     </div>
   );
 };
