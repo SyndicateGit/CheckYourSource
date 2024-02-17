@@ -3,7 +3,7 @@ import React from 'react';
 const Search = () => {
   return (
     <div>
-      {<div class="search-box">
+      {<div className="search-box">
         <h1> Explore Energy Usage by Location</h1>
         <select id="select-province" placeholder="Select a Province">
             <option value="">Select a Province...</option>
