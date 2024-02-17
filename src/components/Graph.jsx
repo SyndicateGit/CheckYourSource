@@ -5,6 +5,7 @@ import { Pie } from "react-chartjs-2";
 import "../styles/PieChart.css";
 
 const labels = ["coal", "wind", "gas", "hydro", "solar", "nuclear"];
+let arr = [];
 const data = {
 labels: labels,
 datasets: [
@@ -24,14 +25,15 @@ datasets: [
         "rgba(153, 102, 255, 1)",
         "rgba(255, 159, 64, 1)",
     ],
-    data: [10, 10, 5, 20, 30, 45],
+    data: arr,
     borderWidth: 1,
   },
  ]
 };
 const Graph = (props) => {
     const api_data = props.data;
-    /* console.log(api_data.powerConsumptionBreakdown.coal); */
+    /* data.datasets[0].data = api_data.powerConsumptionBreakdown.coal; */
+    console.log(api_data);
 
 return (
   <div id="pieChart">
