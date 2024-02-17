@@ -1,9 +1,11 @@
-import Graph from './components/Graph';
 import './styles/App.css';
 import DisplayData from './components/DisplayData';
 import Search from './components/Search';
 import temp_data from './temp_data.json';
 import React, { useState, useEffect } from 'react';
+import Introduction from './components/Introduction';
+
+import zones from './zones.json';
 
 function App() {
   // SEARCH COMPONENT STUFF
@@ -41,10 +43,12 @@ function App() {
       });
   }
 
-
   return (
     <div className="App">
+      <Introduction/>
       <Search submitSearch={submitSearch}/>
+      <div id="zone-country">{zones[data.zone].countryName}</div>
+      <div id="zone-name">{zones[data.zone].zoneName}</div>
       <DisplayData 
       data = {data}/>
     </div>
