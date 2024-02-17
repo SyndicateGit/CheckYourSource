@@ -32,7 +32,7 @@ datasets: [
 };
 const Graph = (props) => {
     const api_data = props.data;
-    /* data.datasets[0].data = api_data.powerConsumptionBreakdown.coal; */
+    arr.push(api_data.powerConsumptionBreakdown.coal);
     console.log(api_data);
 
 return (
