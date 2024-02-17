@@ -2,7 +2,7 @@ import Graph from './components/Graph';
 import './styles/App.css';
 import DisplayData from './components/DisplayData';
 import Search from './components/Search';
-
+import temp_data from './temp_data.json';
 import React, { useState, useEffect } from 'react';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
   
   // DISPLAY DATA COMPONENT STUFF
   // Json data to be passed to display data component
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(temp_data);
 
     // Rerun api call when query updates
     useEffect(() => {
@@ -40,6 +40,7 @@ function App() {
         setData(data);
       });
   }
+
 
   return (
     <div className="App">
