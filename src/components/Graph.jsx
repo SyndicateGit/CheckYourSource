@@ -13,7 +13,7 @@ const Graph = (props) => {
     labels: labels,
     datasets: [
     {
-        label: "energy percentage",
+        label: "energy consumption MW",
         backgroundColor: [
             '#e1dc66',
             '#ea3db3',
