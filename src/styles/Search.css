@@ -4,6 +4,9 @@
     --shadows: rgb(0, 0, 0);
 }
 
+h1{
+    color: var(--Titles);
+}
 .search-box {
     display: flex;
     flex-direction: column;
@@ -14,7 +17,7 @@
 }
 
 #select-province {
-    width: 200px;
+    width: 300px;
     height: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -40,6 +43,6 @@
  display: flex;
  justify-content: center;
  font-size: large;
- color:bisque;
+ color:var(--Titles);
  background-color: #56776A;
 }
