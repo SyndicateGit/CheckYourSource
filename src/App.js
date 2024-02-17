@@ -13,7 +13,7 @@ function App() {
   // Updates the search query with zone code based on selected zone
   function submitSearch(e) {
     e.preventDefault();
-    setQuery(e.target.value);
+    console.log(e);
   }
 
   // DISPLAY DATA COMPONENT STUFF
@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <Search/>
+      <Search submitSearch={submitSearch}/>
       <DisplayData 
       data = {data}/>
     </div>
