@@ -121,7 +121,9 @@ function App() {
       <p>Find out where your energy comes from below! </p>
 
     </div>
-        
+        <div className='accuracy-msg'>
+          <p>**Closest Location With Available DataSet**</p>
+        </div>
         <h2 id="zone-country">{zones[data.zone].countryName}</h2>
         <h2 id="zone-name">{zones[data.zone].zoneName}</h2>
         <DisplayData 

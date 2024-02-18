@@ -23,3 +23,8 @@
     padding: 0;
 }
 
+.accuracy-msg {
+    justify-content: center;
+    text-align: center;
+    color: #DAD7CD;
+}
