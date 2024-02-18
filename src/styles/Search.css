@@ -18,6 +18,9 @@ h1{
     font-size: 1.5rem;
 }
 
+.search-box p{
+    font-weight: 900;
+}
 #select-province {
     width: 1000px;
     height: 50px;
@@ -48,7 +51,7 @@ h1{
 #zone-country
 {
  display: flex;
- margin: 20px 0 0 0;
+ margin: 40px 0 0 0;
  padding: 0;
  justify-content: center;
  font-size: 3rem;
@@ -57,7 +60,7 @@ h1{
 
 #zone-name {
     display: flex;
-    margin: 0 0 20px 0;
+    margin: 0 0 40px 0;
     padding: 0;
     justify-content: center;
     font-size: 2.75rem;
