@@ -14,17 +14,21 @@ body{
 
 /* This targets the scrollbar in webkit-based browsers */
 ::-webkit-scrollbar {
-    width: 5px; /* Adjust the width to make the scrollbar thinner */
+    width: 5px; 
 }
 
 ::-webkit-scrollbar-track {
-    background: #DAD7CD; /* The track (progress bar) color */
+    background: #DAD7CD;
+    
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #56776A; /* The scroll handle color */
+    background: #56776A; 
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #DAD7CD; /* The scroll handle color when hovered */
+    background: #DAD7CD; 
+
 }
+
