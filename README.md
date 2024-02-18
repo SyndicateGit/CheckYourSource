@@ -18,16 +18,3 @@ your power comes from.
 5. Geocoding with an api to fetch longitude latitude based on searching incomplete addresses
 6. Displaying data as a pi chart using Chart.js React
 7. Using HTML tables
-
-
-
-    '#081c15',
-    '#1b4332',
-    '#2d6a4f', 
-    '#40916c',
-    '#52b788',
-    '#568259',
-    '#6ede8a',
-    '#aad576',
-    '#b7f9cc',
-    '#132a13'

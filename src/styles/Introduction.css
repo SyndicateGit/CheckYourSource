@@ -1,5 +1,7 @@
 :root{
-    --Titles:#344E41;
+    --Titles:#26423E;
+    --secondaryGreen: #3A5A40;
+    --font: #DAD7CD;
 }
 
 .Intro {
@@ -38,4 +40,22 @@
     .Intro p {
         font-size: 1rem;
     }
+}
+
+.about-us-btn{
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    background-color:#3A5A40 ;
+    border: none;
+    color: #DAD7CD;
+    border-radius: 5px;
+    padding: 10px 15px 10px 15px;
+    margin-top: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: #DAD7CD;
 }
