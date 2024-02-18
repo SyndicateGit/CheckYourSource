@@ -23,6 +23,11 @@ const Search = (props) => {
           </select>
           <button id="search-button">Search</button>
         </form>
+        <form type="search-form" action="" id='search-form2' onSubmit={props.submitGeocodeSearch}>
+          <input id='geosearch' type="text" name='search'/>
+          <button id="search-button">Search</button>
+        </form>
+
     </div>}
     </div>
   );

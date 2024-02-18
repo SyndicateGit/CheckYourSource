@@ -10,10 +10,13 @@ import './styles/Introduction.css';
 import zones from './zones.json';
 
 function App() {
+  const geocode = "1r7AiuCkuhyjiBR9xditOIKaT0Xzlhby";
   // SEARCH COMPONENT STUFF
   // State to store the search query
   const[query, setQuery] = useState('CA-ON');
   
+  const[search, setSearch] = useState('');
+
   // DISPLAY DATA COMPONENT STUFF
   // Json data to be passed to display data component
   const [data, setData] = useState(temp_data);
@@ -31,6 +34,12 @@ function App() {
     e.preventDefault();
     var zone = document.getElementById('select-province').value;
     setQuery(zone);
+  }
+
+  function submitGeocodeSearch(e){
+    e.preventDefault();
+    var search = document.getElementById('geosearch').value;
+    fetchGeocode(search);
   }
 
 
@@ -61,6 +70,13 @@ function App() {
       });
   }
 
+  async function fetchGeocode(query){
+    var parsedQuery = ' ' + query;
+    const response = await fetch(`https://api.geocodify.com/v2/geocode?api_key=${geocode}&q=900${parsedQuery}`);
+    const data = await response.json();
+    console.log(data);
+  }
+
   if(data.error){
     return (
     <div className="App">
@@ -77,7 +93,7 @@ function App() {
       <div className="App">
             <div class = "Intro">
       <h1>Where Does your Energy Come From?</h1>
-      <Search submitSearch={submitSearch}/>
+      <Search submitSearch={submitSearch} submitGeocodeSearch = {submitGeocodeSearch}/>
       <p>In a world where we consume a lot of energy it is important to know where it comes from </p>
       <p>Find out where your energy comes from below! </p>
 
