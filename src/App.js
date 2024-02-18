@@ -64,7 +64,7 @@ function App() {
   }
 
   function fetchDataCoordinates(coordinates){
-    fetch(`https://api.electricitymap.org/v3/power-breakdown/latest?lat=${coordinates[0]}=${coordinates[1]}`)
+    fetch(`https://api.electricitymap.org/v3/power-breakdown/latest?lat=${coordinates[0]}&lon=${coordinates[1]}`)
       .then((response) => response.json(), {
         mode: 'cors',
         header:{
