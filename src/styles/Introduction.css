@@ -28,3 +28,14 @@
     text-align: center;
     color: #DAD7CD;
 }
+
+/* Media query for tablets and above */
+@media (max-width: 768px) {
+    .Intro {
+        font-size: 1rem;
+    }
+
+    .Intro p {
+        font-size: 1.2rem;
+    }
+}

@@ -59,3 +59,17 @@ h1{
     font-size: 2.75rem;
     color: var(--font);
 }
+
+/* Media query for tablets and above */
+@media (max-width: 768px) {
+    /* Styles for tablets and larger devices */
+    #geosearch {
+        width: 90%;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    #search-button {
+        width: 91%;
+        border-radius: 0px 0px 5px 5px;
+    }
+}

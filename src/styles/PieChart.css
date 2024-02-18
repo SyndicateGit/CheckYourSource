@@ -65,3 +65,18 @@ table tr, td, th{
     margin: 0 0 0 0;
 }
 
+/* Media query for tablets and above */
+@media (max-width: 768px) {
+    #pieChart {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        height: 60%;
+    }
+
+    .pieChart {
+        justify-content: center;
+        align-content: center;
+    }
+
+}
