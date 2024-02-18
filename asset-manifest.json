@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/CheckYourSource/static/css/main.0684ffef.css",
+    "main.js": "/CheckYourSource/static/js/main.06890ff0.js",
+    "static/js/453.57cd713b.chunk.js": "/CheckYourSource/static/js/453.57cd713b.chunk.js",
+    "static/media/tree-mountain.jpg": "/CheckYourSource/static/media/tree-mountain.bffb69190a69b06d2a29.jpg",
+    "index.html": "/CheckYourSource/index.html",
+    "main.0684ffef.css.map": "/CheckYourSource/static/css/main.0684ffef.css.map",
+    "main.06890ff0.js.map": "/CheckYourSource/static/js/main.06890ff0.js.map",
+    "453.57cd713b.chunk.js.map": "/CheckYourSource/static/js/453.57cd713b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0684ffef.css",
+    "static/js/main.06890ff0.js"
+  ]
+}
