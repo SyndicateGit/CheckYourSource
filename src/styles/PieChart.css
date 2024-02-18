@@ -79,4 +79,8 @@ table tr, td, th{
         align-content: center;
     }
 
+    .table {
+        text-align: center;
+        justify-content: center;
+    }
 }

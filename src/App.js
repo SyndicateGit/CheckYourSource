@@ -128,7 +128,10 @@ function App() {
         data = {data}
         lastUpdate = {data.createdAt}
         />
-      </div>
+        <button className='about-us-btn'>
+          <a href='https://isteyak12.github.io/ex/'>about Us</a>
+        </button>
+    </div>
     );
   }
 

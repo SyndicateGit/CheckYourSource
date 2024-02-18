@@ -29,6 +29,17 @@ body{
 
 ::-webkit-scrollbar-thumb:hover {
     background: #DAD7CD; 
-
 }
 
+.about-us-btn {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    background-color: white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
