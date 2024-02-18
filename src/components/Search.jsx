@@ -5,7 +5,7 @@ const Search = (props) => {
     <div>
       {<div className="search-box">
         <form type="search-form" action="" id='search-form2' onSubmit={props.submitGeocodeSearch}>
-          <input id='geosearch' type="text" name='search'/>
+          <input id='geosearch' type="text" name='search' placeholder='Enter a location'/>
           <button id="search-button">Search</button>
         </form>
 
