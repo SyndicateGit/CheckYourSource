@@ -31,7 +31,6 @@ function App() {
     }, [query]);
 
     useEffect(() => {
-      console.log(coordinates);
       fetchDataCoordinates(coordinates);
     }, [coordinates]);
 
@@ -95,6 +94,7 @@ function App() {
     var parsedQuery = ' ' + query;
     const response = await fetch(`https://api.geocodify.com/v2/geocode?api_key=${geocode}&q=900${parsedQuery}`);
     const data = await response.json();
+    console.log(data);
     const longitude = data.response.features[0].geometry.coordinates[0];
     const latitude = data.response.features[0].geometry.coordinates[1];
     setCoordinates([latitude, longitude]);
