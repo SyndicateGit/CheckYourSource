@@ -10,5 +10,25 @@ body{
     margin: 0;
     padding: 0 0 40px 0;
     box-sizing: border-box;
+}
+
+/* This targets the scrollbar in webkit-based browsers */
+::-webkit-scrollbar {
+    width: 5px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #DAD7CD;
     
 }
+
+::-webkit-scrollbar-thumb {
+    background: #56776A; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #DAD7CD; 
+
+}
+

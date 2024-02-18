@@ -123,7 +123,7 @@ function App() {
 
     </div>
         <div className='accuracy-msg'>
-          <p>**Closest Location With Available DataSet**</p>
+          <p>**Closest Location With Available Dataset**</p>
         </div>
         <h2 id="zone-country">{zones[data.zone].countryName}</h2>
         <h2 id="zone-name">{zones[data.zone].zoneName}</h2>
