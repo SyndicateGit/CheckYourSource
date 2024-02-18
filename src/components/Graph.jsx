@@ -4,7 +4,7 @@ import Chart, { Colors } from "chart.js/auto";
 import { Pie } from "react-chartjs-2";
 import "../styles/PieChart.css";
 
-Chart.defaults.color = '#fff';
+Chart.defaults.color = '#DAD7CD';
 
 const Graph = (props) => {
     const labels = ["biomass", "coal", "gas", "geothermal", "hydro", "nuclear", "oil", "solar", "wind", "unknown"];
@@ -15,19 +15,19 @@ const Graph = (props) => {
     {
         label: "energy consumption MW",
         backgroundColor: [
-            '#e1dc66',
-            '#ea3db3',
-            '#62035c',
-            '#f5950e',
-            '#63f46a',
-            '#41aebc',
-            '#cb2c14',
-            '#97f4d6',
-            '#9155ca',
-            '#443e97'
+            '#582f0e',
+            '#7f4f24',
+            '#936639',
+            '#a68a64',
+            '#b6ad90',
+            '#c2c5aa',
+            '#a4ac86',
+            '#656d4a',
+            '#414833',
+            '#333d29'
         ],
         borderColor: [
-            '#fff'
+            '#DAD7CD'
         ],
         data: arr,
         borderWidth: 1,
