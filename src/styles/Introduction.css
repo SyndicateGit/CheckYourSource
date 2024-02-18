@@ -8,11 +8,13 @@
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../images/tree-mountain.jpg');
     background-size: cover; 
     background-position: center; 
-    height: 50vh;
+    height: 60vh;
     text-align: center;
+    text-wrap: nowrap;
     justify-content: center;  
     color: var(--Titles);
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .Intro p {

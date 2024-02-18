@@ -15,7 +15,7 @@ h1{
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: var(--font);
+    background-color: #C2D3D0;
 }
 
 #select-province {
