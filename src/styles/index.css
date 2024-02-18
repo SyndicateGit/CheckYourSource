@@ -1,3 +1,9 @@
+:root{
+    --Titles:#26423E;
+    --secondaryGreen: #56776A;
+    --font: #DAD7CD;
+}
+
 body{
     background-color: #344E41;
     font-family: "Inter", sans-serif;

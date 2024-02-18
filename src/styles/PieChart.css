@@ -1,8 +1,4 @@
-:root{
-    --Titles:#26423E;
-    --secondaryGreen: #56776A;
-    --font: #DAD7CD;
-}
+
 
 #pieChart {
     display: flex;
