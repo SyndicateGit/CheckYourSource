@@ -1,10 +1,12 @@
 # WinHacks Hackathon Project: Energy Comsumption Breakdown
-//TODO: Write Readme
 
 # What we learned:
-Cannot hide api keys on static websites
+1. We cannot hide API keys on static websites
+2. How to pull data from a form and query it from an API
+3. A bit of React
+4. Color schemes and fonts are important:
 
-# Color schemes and fonts are important:
+
     '#081c15',
     '#1b4332',
     '#2d6a4f', 
