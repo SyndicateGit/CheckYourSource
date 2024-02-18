@@ -10,7 +10,7 @@
     background-position: center; 
     height: 60vh;
     text-align: center;
-    text-wrap: nowrap;
+    text-wrap: wrap;
     justify-content: center;  
     color: var(--Titles);
     font-size: 2rem;
