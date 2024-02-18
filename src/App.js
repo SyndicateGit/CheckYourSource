@@ -15,7 +15,8 @@ function App() {
   // State to store the search query
   const[query, setQuery] = useState('CA-ON');
   
-  const[search, setSearch] = useState('');
+  // For searching based on longitude latitude [lat, long]
+  const[coordinates, setCoordinates] = useState([42.3149, -83.0364]);
 
   // DISPLAY DATA COMPONENT STUFF
   // Json data to be passed to display data component
@@ -28,6 +29,11 @@ function App() {
       fetchData(query);
       fetchCarbonIntensity(query);
     }, [query]);
+
+    useEffect(() => {
+      console.log(coordinates);
+      fetchDataCoordinates(coordinates);
+    }, [coordinates]);
 
   // Updates the search query with zone code based on selected zone
   function submitSearch(e) {
@@ -57,6 +63,21 @@ function App() {
       });
   }
 
+  function fetchDataCoordinates(coordinates){
+    fetch(`https://api.electricitymap.org/v3/power-breakdown/latest?lat=${coordinates[0]}=${coordinates[1]}`)
+      .then((response) => response.json(), {
+        mode: 'cors',
+        header:{
+          'auth-token': '6jTh4iOxCZaYk',
+        }
+      })
+      .then((data) => {
+        console.log(data)
+        setData(data);
+      });
+  }
+
+  
   function fetchCarbonIntensity(query){
     fetch(`https://api.electricitymap.org/v3/carbon-intensity/latest?zone=${query}`)
       .then((response) => response.json(), {
@@ -74,7 +95,9 @@ function App() {
     var parsedQuery = ' ' + query;
     const response = await fetch(`https://api.geocodify.com/v2/geocode?api_key=${geocode}&q=900${parsedQuery}`);
     const data = await response.json();
-    console.log(data);
+    const longitude = data.response.features[0].geometry.coordinates[0];
+    const latitude = data.response.features[0].geometry.coordinates[1];
+    setCoordinates([latitude, longitude]);
   }
 
   if(data.error){
