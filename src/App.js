@@ -32,6 +32,7 @@ function App() {
 
     useEffect(() => {
       fetchDataCoordinates(coordinates);
+      fetchCarbonIntensity(coordinates);
     }, [coordinates]);
 
   // Updates the search query with zone code based on selected zone
