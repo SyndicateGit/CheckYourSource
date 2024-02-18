@@ -15,25 +15,30 @@ h1{
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: #C2D3D0;
+    font-size: 1.5rem;
 }
 
 #select-province {
-    width: 300px;
-    height: 30px;
-    border: 1px solid var(--font);
+    width: 1000px;
+    height: 50px;
     border-radius: 5px;
-    padding: 5px;
+    align-self: center;
+    justify-content: center;
+    font-size: 1.5rem;
 }
 
 #search-button {
-    width: 100px;
-    height: 30px;
+    width: 150px;
+    height: 50px;
     background-color: var(--secondaryGreen);
     color: var(--font);
     border: none;
     border-radius: 5px;
+    font-size: 1.5rem;
+    align-self: center;
+    justify-content: center;
     cursor: pointer;
+    padding: 0;
 }
 
 #search-button:hover {
