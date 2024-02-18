@@ -5,7 +5,7 @@ import { Pie } from "react-chartjs-2";
 import "../styles/PieChart.css";
 
 Chart.defaults.color = '#DAD7CD';
-Chart.defaults.font.size = 15;
+Chart.defaults.font.size = 16;
 const Graph = (props) => {
     const labels = ["Biomass", "Coal", "Gas", "Geothermal", "Hydro", "Nuclear", "Oil", "Solar", "Wind", "Unknown"];
     let arr = [];
