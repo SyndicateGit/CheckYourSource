@@ -1,13 +1,12 @@
 :root{
     --Titles:#26423E;
-    --secondaryGreen: #56776A;
+    --secondaryGreen: #3A5A40;
     --font: #DAD7CD;
 }
 
 h1{
     color: var(--Titles);
 }
-
 
 .search-box {
     display: flex;
@@ -18,9 +17,6 @@ h1{
     font-size: 1.5rem;
 }
 
-.search-box p{
-    font-weight: 900;
-}
 #select-province {
     width: 1000px;
     height: 50px;
