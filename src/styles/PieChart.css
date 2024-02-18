@@ -1,3 +1,9 @@
+:root{
+    --Titles:#26423E;
+    --secondaryGreen: #56776A;
+    --font: #DAD7CD;
+}
+
 #pieChart {
     display: flex;
     justify-content: center;
@@ -13,11 +19,11 @@
 
 .values {
     display: inline-block;
-    background-color: white;
+    background-color: var(--font);
 }
 
 .pieChart {
-    color: white;
+    color: var(--font);
 }
 
 #total-consumption,
@@ -28,6 +34,13 @@
     margin: 0;
     padding: 0;
     text-align: center;
-    color: white;
-
+    color: var(--font);
 }
+
+#total-consumption{
+    margin: 20px 0 0 0;
+}
+#renewable-percentage{
+    margin: 0 0 20px 0;
+}
+

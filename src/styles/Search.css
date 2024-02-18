@@ -1,29 +1,27 @@
 :root{
     --Titles:#26423E;
     --secondaryGreen: #56776A;
-    --shadows: rgb(0, 0, 0);
+    --font: #DAD7CD;
 }
 
 h1{
     color: var(--Titles);
 }
 
-h2{
 
-}
 .search-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background-color: #C2D3D0;
+    background-color: var(--font);
 }
 
 #select-province {
     width: 300px;
     height: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--font);
     border-radius: 5px;
     padding: 5px;
 }
@@ -32,7 +30,7 @@ h2{
     width: 100px;
     height: 30px;
     background-color: var(--secondaryGreen);
-    color: white;
+    color: var(--font);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -42,11 +40,21 @@ h2{
     background-color: var(--Titles);
 }
 
-#zone-country,
-#zone-name {
+#zone-country
+{
  display: flex;
+ margin: 20px 0 0 0;
+ padding: 0;
  justify-content: center;
- font-size: 1.5rem;
- color:var(--Titles);
- background-color: #56776A;
+ font-size: 3rem;
+ color: var(--font);
+}
+
+#zone-name {
+    display: flex;
+    margin: 0 0 20px 0;
+    padding: 0;
+    justify-content: center;
+    font-size: 2.75rem;
+    color: var(--font);
 }
