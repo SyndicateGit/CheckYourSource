@@ -27,7 +27,6 @@ function App() {
     // Rerun api call when query updates
     useEffect(() => {
       fetchData(query);
-      fetchCarbonIntensity(query);
     }, [query]);
 
     useEffect(() => {
@@ -71,14 +70,13 @@ function App() {
         }
       })
       .then((data) => {
-        console.log(data)
         setData(data);
       });
   }
 
   
-  function fetchCarbonIntensity(query){
-    fetch(`https://api.electricitymap.org/v3/carbon-intensity/latest?zone=${query}`)
+  function fetchCarbonIntensity(coordinates){
+    fetch(`https://api.electricitymap.org/v3/power-breakdown/latest?lat=${coordinates[0]}&lon=${coordinates[1]}`)
       .then((response) => response.json(), {
         mode: 'cors',
         header:{
@@ -86,6 +84,7 @@ function App() {
         }
       })
       .then((data) => {
+        console.log(data);
         setCarbonIntensity(data.carbonIntensity);
       });
   }
@@ -94,7 +93,6 @@ function App() {
     var parsedQuery = ' ' + query;
     const response = await fetch(`https://api.geocodify.com/v2/geocode?api_key=${geocode}&q=900${parsedQuery}`);
     const data = await response.json();
-    console.log(data);
     const longitude = data.response.features[0].geometry.coordinates[0];
     const latitude = data.response.features[0].geometry.coordinates[1];
     setCoordinates([latitude, longitude]);
@@ -128,7 +126,8 @@ function App() {
         <h2 id="zone-name">{zones[data.zone].zoneName}</h2>
         <DisplayData 
         data = {data}
-        carbonIntensity={carbonIntensity}/>
+        lastUpdate = {data.createdAt}
+        />
       </div>
     );
   }
