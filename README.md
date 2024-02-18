@@ -1,4 +1,4 @@
-# WinHacks Hackathon Project: Energy Comsumption Breakdown
+# WinHacks Hackathon Project: Energy Comsumption Breakdown ⚡
 In a world where we consume a lot of energy it is important to know where it comes from.
 
 Our web app takes address search and returns the power consumption breakdown of what kind of energy source
